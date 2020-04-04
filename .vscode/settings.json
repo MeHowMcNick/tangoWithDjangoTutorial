@@ -1,0 +1,7 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "C:\\Users\\Toshiba.000\\VSCodeProjects\\tangoWithDjangoTutorial\\Scripts\\python.exe",
+    "editor.tabCompletion": "on",
+    "emmet.triggerExpansionOnTab": true,
+}
