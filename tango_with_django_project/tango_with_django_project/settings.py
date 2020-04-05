@@ -78,6 +78,8 @@ WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# name: michal password: qwerty1234
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
