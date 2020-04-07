@@ -19,9 +19,18 @@ from django.conf import settings
 from django.conf.urls import include
 from django.conf.urls.static import static
 from rango import views
+from registration.backends.simple.views import RegistrationView
+
+
+class MyRegistrationView(RegistrationView):
+    def get_success_url(self, user):
+        return '/rango/'
+
 
 urlpatterns = [
     path('', views.index, name="index"),
     path('rango/', include('rango.urls')),
+    path('accounts/', include('registration.backends.simple.urls')),
+    path('accounts/register/', MyRegistrationView.as_view(), name="registration_register"),
     path('admin/', admin.site.urls),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
